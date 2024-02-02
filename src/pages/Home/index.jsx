@@ -1,24 +1,9 @@
-
-import './App.css';
-
-function App() {
+function Home() {
   return (
-    <div className="App">
-      <header className="App-header">
-     
-        <p>
-          welcome to my app
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        </a>
-      </header>
+    <div>
+      <h1> Page d'accueil</h1>
     </div>
-  );
+  )
 }
 
-export default App;
+export default Home
