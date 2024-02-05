@@ -7,9 +7,18 @@ import Animations from './pages/Animations'
 import Skills from './pages/Skills'
 import Header from './components/Header'
 import Error from './components/Error'
-import './styles/index.css'
 
+import { createGlobalStyle } from 'styled-components'
 
+const GlobalStyle = createGlobalStyle`
+    * {
+      font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    }
+
+    body {
+      margin: 0;
+    }
+`
 
 ReactDOM.render(
   <React.StrictMode>

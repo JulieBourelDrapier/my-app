@@ -1,8 +1,18 @@
+import styled from 'styled-components'
+import colors from '../../utils/style/colors'
+
+const Title = styled.h1`
+  color: ${colors.primary};
+`
+const Subtitle = styled.h2`
+  color: ${colors.secondary};
+`
+
 function Contact() {
   return (
     <div>
-      <h1>Vous souhaitez me contacter ?</h1>
-      <h2>Plusieurs options s'offrent à vous</h2>
+      <Title>Vous souhaitez me contacter ?</Title>
+      <Subtitle>Plusieurs options s'offrent à vous</Subtitle>
     </div>
   )
 }
