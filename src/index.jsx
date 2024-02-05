@@ -7,7 +7,7 @@ import Projets from './pages/Projets'
 import Skills from './pages/Skills'
 import Header from './components/Header'
 import Error from './components/Error'
-
+// import Article from './components/Article'
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`

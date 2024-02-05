@@ -5,8 +5,8 @@ const colors = {
   fourth: '#00c092',
   fifth: '#ffbbab',
   sixth: '#fb8960',
-  white: '#fff',
-  black: '#000',
+  white: '#edede9',
+  black: '#293241',
 }
 export default colors
 // pr l'utiliser, il nous suffit de l'importer directement dans notre template string 

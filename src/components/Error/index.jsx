@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import colors from '../../utils/style/colors'
+import fonts from '../../utils/style/fonts'
 
 
 const ErrorWrapper = styled.div`
@@ -8,6 +9,7 @@ const ErrorWrapper = styled.div`
   flex-direction: column;
   background-color: ${colors.white};
   align-items: center;
+  font-family: ${fonts.main};
 `
 
 const ErrorTitle = styled.h1`
