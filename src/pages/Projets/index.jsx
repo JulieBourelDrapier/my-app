@@ -8,13 +8,13 @@ const Title = styled.h1`
 const Subtitle = styled.h2`
   color: ${colors.secondary}; 
 `
-function Animations() {
+function Projets() {
   return (
     <div>
-      <Title>Animations</Title>
+      <Title>Projets</Title>
       <Subtitle>Blabla</Subtitle>
     </div>
   )
 }
 
-export default Animations
+export default Projets

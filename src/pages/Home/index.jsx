@@ -5,7 +5,7 @@ const HomeWrapper = styled.div`
   display: flex;
   justify-content: center;
 `
-const HomerContainer = styled.div`
+const HomeContainer = styled.div`
   margin: 30px;
   background-color: ${colors.background};
   padding: 60px 90px;
