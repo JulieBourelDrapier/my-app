@@ -7,7 +7,7 @@ import Animations from './pages/Animations'
 import Skills from './pages/Skills'
 import Header from './components/Header'
 import Error from './components/Error'
-import './styles/index.css'
+
 
 
 ReactDOM.render(
