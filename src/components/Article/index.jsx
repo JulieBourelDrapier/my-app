@@ -1,36 +1,43 @@
-import styled from 'styled-components'
-import colors from '../../utils/style/colors'
-import fonts from '../../utils/style/fonts'
+import styled, { keyframes } from 'styled-components';
+import colors from '../../utils/style/colors';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
 
+const rotateAnimation = keyframes`
+  0% {
+   rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+`;
 
 const ArticleWrapper = styled.article`
-  margin: 10px 40px;
-  padding: 20px 10px;
-  display: flex;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 50%;
   background-color: ${colors.primary};
-  align-items: center;
-  opacity: 0.2;
-  font-family: ${fonts.main};
-  border-radius: 20px;
-`
-
-const ArticleText = styled.p`
   text-align: center;
-  color: ${colors.white};
-  font-size: 15px;
-  font-family: ${fonts.third};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  animation: ${rotateAnimation} 1200ms ease-in-out infinite;
+ 
 `
 
+const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
+  font-size: 30px;
+  color: ${colors.white};
+`
 
 function Article() {
   return (
     <ArticleWrapper>
-      <ArticleText>
-        Cette page donne un aperçu 
-        de mon parcours
-      </ArticleText>
+      <StyledFontAwesomeIcon icon={faLightbulb} />
     </ArticleWrapper>
   )
 }
 
-export default Article
+export default Article;

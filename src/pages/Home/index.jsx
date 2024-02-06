@@ -1,69 +1,80 @@
 import styled from 'styled-components'
 import colors from '../../utils/style/colors'
 import fonts from '../../utils/style/fonts'
+import Article from '../../components/Article'
 
 
 const HomeWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
 `
 const FirstSection = styled.section`
-background-image: url(${require('../../assets/idea.jpg')});
-background-repeat: no-repeat;
-background-position: top right;
-background-size: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url(${require('../../assets/conception.jpg')});
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  border-radius: 18px;
 `
 
 const HomeContainer = styled.div`
-  margin: 30px;
-  background-color: ${colors.white};
-  padding: 60px 90px;
+  color: ${colors.white};
   display: flex;
   text-align: center;
   flex-direction: column;
-  min-width: 300px;
-  border-radius: 300px;	
-  border: 5px solid ${colors.primary};
+  background-color: ${colors.white};
+  margin: 20px;
+  opacity: 0.8;
+  width: 45%;
+  border-radius: 18px;
+  padding: 10px;
 `
 
 const Title = styled.h2`
+  font-size: 16px;
   color: ${colors.primary};
-  font-size: 30px;
   font-family: ${fonts.third};
   letter-spacing: 2px;
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
 `
 const HomePresentation = styled.div`
-  color: ${colors.primary};
-  opacity: 0.7;	
-  font-size: 20px;
-  font-family: ${fonts.third};
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 const SecondSection = styled.section`
   color: ${colors.primary};
-  opacity: 0.7;	
-  font-size: 20px;
   font-family: ${fonts.third};
 `
 
 const Presentation = styled.p`
   color: ${colors.primary};
-  opacity: 0.7;
-  font-size: 20px;
-  margin: 10px;
-  padding: 10px;
-  text-align: center;
+  letter-spacing: 1px;
+  font-size: 10px;
   font-family: ${fonts.third};
+  @media (min-width: 768px) {
+    font-size: 14px;
+  }
 `
 
 function Home() {
   return (
     <HomeWrapper>
       <FirstSection>
+        <Article />
         <HomeContainer>
           <Title>Votre projet, notre priorité</Title>
-          <HomePresentation>Vous êtes créateur ou à l'iniative d'une micro-entreprise et vous êtes en quête de visibilité ?</HomePresentation>
-          <HomePresentation>Contactez-nous</HomePresentation>
+          <Presentation>Vous êtes créateur ou à l'iniative d'une micro-entreprise et vous êtes en quête de visibilité ?</Presentation>
+          <Presentation>Contactez-nous</Presentation>
         </HomeContainer>
       </FirstSection>
 

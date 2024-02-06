@@ -3,18 +3,24 @@ import styled from 'styled-components'
 import colors from '../../utils/style/colors'
 import fonts from '../../utils/style/fonts'
 
+
 const HeaderWrapper = styled.div` 
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding: 40px 40px;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 40px auto;
 `
 const MainTitle = styled.h1`
   color: ${colors.primary};
   font-family: ${fonts.primary};
-  font-size: 40px;
+  font-size: 20px;
   letter-spacing: 2px;
   margin: 0;
+  @media (min-width: 768px) {
+    font-size: 40px;
+  }
 `
 const LinksContainer = styled.nav`
   display: flex;
@@ -23,11 +29,13 @@ const LinksContainer = styled.nav`
 const StyledLink = styled(Link)`
   color: ${colors.primary};
   font-family: ${fonts.third};
-  letter-spacing: 1px;
-  margin: 0 10px;
-  padding: 16px 2px;
+  
+  padding: 10px;
+  font-size: 12px;
   text-decoration: none;
-  font-size: 15px;
+  @media (min-width: 768px) {
+    font-size: 15px; 
+  }
 `
 function Header() {
   return (
