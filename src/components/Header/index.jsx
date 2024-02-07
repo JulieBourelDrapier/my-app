@@ -1,7 +1,11 @@
+import React from 'react';
+import { fallDown as MenuBurger } from 'react-burger-menu';
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import colors from '../../utils/style/colors'
 import fonts from '../../utils/style/fonts'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 
 const HeaderWrapper = styled.div` 
@@ -22,34 +26,30 @@ const MainTitle = styled.h1`
     font-size: 40px;
   }
 `
-const LinksContainer = styled.nav`
-  display: flex;
-`
 
 const StyledLink = styled(Link)`
   color: ${colors.primary};
-  font-family: ${fonts.third};
-  
-  padding: 10px;
-  font-size: 12px;
-  text-decoration: none;
-  @media (min-width: 768px) {
-    font-size: 15px; 
+  font-family: ${fonts.primary};
+  font-size: 40px;
   }
 `
-function Header() {
+
+
+const Header = () => {
   return (
+    <div>
     <HeaderWrapper>
-    <MainTitle>Front&Dev</MainTitle>
-    <LinksContainer>
-      <StyledLink to="/">Accueil</StyledLink>
-      <StyledLink to="/skills">À propos</StyledLink>
-      <StyledLink to="/projets">Projets</StyledLink>
-      <StyledLink to="/contact">Contact</StyledLink>
-    </LinksContainer>
+      <MainTitle>IDev</MainTitle>
+      <StyledLink to="/"><FontAwesomeIcon icon={faBars} /></StyledLink>
     </HeaderWrapper>
-  )
-}
+    <MenuBurger>
+      <StyledLink id="home" className="menu-item" to="/">Accueil</StyledLink>
+      <StyledLink id="about" className="menu-item" to="/skills">À propos</StyledLink>
+      <StyledLink id="project" className="menu-item" to="/projets">Projets</StyledLink>
+      <StyledLink id="contact" className="menu-item" to="/contact">Contact</StyledLink>
+    </MenuBurger>
+    </div>
+  );
+};
 
-
-export default Header
+export default Header;

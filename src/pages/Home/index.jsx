@@ -1,8 +1,19 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import colors from '../../utils/style/colors'
 import fonts from '../../utils/style/fonts'
 import Article from '../../components/Article'
 
+const apparitionAnimation = keyframes`
+  0% {
+   opacity: 0;
+  }
+  50% {
+   opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }	
+`;
 
 const HomeWrapper = styled.div`
   display: flex;
@@ -11,6 +22,7 @@ const HomeWrapper = styled.div`
   justify-content: center;
   width: 80%;
   margin: 0 auto;
+  gap: 10px;
 `
 const FirstSection = styled.section`
   display: flex;
@@ -43,26 +55,64 @@ const Title = styled.h2`
   font-family: ${fonts.third};
   letter-spacing: 2px;
   @media (min-width: 768px) {
-    font-size: 20px;
+    font-size: 24px;
   }
 `
-const HomePresentation = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
-const SecondSection = styled.section`
-  color: ${colors.primary};
-  font-family: ${fonts.third};
-`
-
 const Presentation = styled.p`
   color: ${colors.primary};
   letter-spacing: 1px;
   font-size: 10px;
   font-family: ${fonts.third};
   @media (min-width: 768px) {
-    font-size: 14px;
+    font-size: 18px;
+  }
+`
+const SecondSection = styled.section`
+  color: ${colors.primary};
+  font-family: ${fonts.third};
+  width: 100%;
+  border-radius: 18px;
+  background-image: url(${require('../../assets/nik.jpg')});
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (min-width: 768px) {
+    height: 600px; 
+  }
+`
+
+const DetailsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  animation: ${apparitionAnimation} 5s ease-in-out;
+`
+const Details = styled.p`
+  color: ${colors.black};
+  opacity: 0.9;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-family: ${fonts.third};
+  display: flex;
+  padding-top: 30px;
+  padding-left: 10px;
+  justify-content: flex-start;
+  @media (min-width: 768px) {
+    font-size: 40px;
+    justify-content: center;
+  }
+`
+const Logo = styled.h1`
+  color: ${colors.primary};
+  font-family: ${fonts.primary};
+  font-size: 28px;
+  padding-left: 10px;
+  letter-spacing: 6px;
+  text-align: center;
+  @media (min-width: 768px) {
+    font-size: 40px;
   }
 `
 
@@ -72,16 +122,17 @@ function Home() {
       <FirstSection>
         <Article />
         <HomeContainer>
-          <Title>Votre projet, notre priorité</Title>
-          <Presentation>Vous êtes créateur ou à l'iniative d'une micro-entreprise et vous êtes en quête de visibilité ?</Presentation>
-          <Presentation>Contactez-nous</Presentation>
+          <Title>Votre projet, une priorité</Title>
+          <Presentation>Vous êtes créateur ou gestionnaire d'une entreprise et vous êtes en quête de visibilité ?</Presentation>
+          <Presentation>Contactez-moi !</Presentation>
         </HomeContainer>
       </FirstSection>
 
       <SecondSection>
-        <HomePresentation>
-        <Presentation>Front&Dev est nait de la volonté de créer des sites vitrine pour des créateurs en quête de visibilité</Presentation>
-        </HomePresentation>
+        <DetailsContainer>
+          <Logo>IDev</Logo> 
+          <Details>Entreprise naît de la volonté de créer des sites vitrines pour des créateurs en quête de visibilité</Details>
+        </DetailsContainer>
       </SecondSection>
 
     </HomeWrapper>
