@@ -91,12 +91,12 @@ const DetailsContainer = styled.div`
 `
 const Details = styled.p`
   color: ${colors.black};
-  opacity: 0.9;
+  opacity: 0.8;
   letter-spacing: 1px;
   font-size: 14px;
   font-family: ${fonts.third};
   display: flex;
-  padding-top: 30px;
+  padding-top: 0;
   padding-left: 10px;
   justify-content: flex-start;
   @media (min-width: 768px) {
@@ -122,8 +122,8 @@ function Home() {
       <FirstSection>
         <Article />
         <HomeContainer>
-          <Title>Votre projet, une priorité</Title>
-          <Presentation>Vous êtes créateur ou gestionnaire d'une entreprise et vous êtes en quête de visibilité ?</Presentation>
+          <Title>Votre projet, ma priorité</Title>
+          <Presentation>Vous êtes créateur et vous rêvez qu'un site mette en lumière votre travail</Presentation>
           <Presentation>Contactez-moi !</Presentation>
         </HomeContainer>
       </FirstSection>

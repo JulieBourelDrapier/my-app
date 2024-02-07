@@ -7,23 +7,26 @@ import Projets from './pages/Projets'
 import Skills from './pages/Skills'
 import Header from './components/Header'
 import Error from './components/Error'
+import Footer from './components/Footer'
+import Article from './components/Article'
 // import Article from './components/Article'
-import { createGlobalStyle } from 'styled-components'
+// import { createGlobalStyle } from 'styled-components'
 
-const GlobalStyle = createGlobalStyle`
-    * {
-      font-family: 'Trebuchet MS', Helvetica, sans-serif;
-    }
+// const GlobalStyle = createGlobalStyle`
+//     * {
+//       font-family: 'Trebuchet MS', Helvetica, sans-serif;
+//     }
 
-    body {
-      margin: 0;
-    }
-`
+//     body {
+//       margin: 0;
+//     }
+// `
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Header />
+      <Header />'
+      <Article />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
@@ -31,6 +34,7 @@ ReactDOM.render(
         <Route path="/skills" element={< Skills/>} />
         <Route path="*" element={<Error />} />
       </Routes>
+      <Footer />
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
