@@ -20,7 +20,7 @@ const HomeWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   gap: 10px;
 `
@@ -72,11 +72,12 @@ const SecondSection = styled.section`
   font-family: ${fonts.third};
   width: 100%;
   border-radius: 18px;
-  background-image: url(${require('../../assets/nik.jpg')});
+  background-image: url(${require('../../assets/nik.webp')});
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
+  height: 400px;
   justify-content: center;
   @media (min-width: 768px) {
     height: 600px; 
@@ -87,7 +88,7 @@ const DetailsContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 80%;
-  animation: ${apparitionAnimation} 5s ease-in-out;
+  animation: ${apparitionAnimation} 3s ease-in-out;
 `
 const Details = styled.p`
   color: ${colors.black};

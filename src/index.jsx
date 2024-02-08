@@ -25,8 +25,7 @@ import Article from './components/Article'
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Header />'
-      <Article />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />

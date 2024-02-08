@@ -16,6 +16,7 @@ const ArticleWrapper = styled.article`
   width: 50px;
   height: 50px;
   margin: 20px;
+  margin-left: 70px;
   border-radius: 50%;
   background-color: ${colors.black};
   text-align: center;
@@ -27,6 +28,7 @@ const ArticleWrapper = styled.article`
   animation-iteration-count: 2;
   animation-delay: 0.5s;
   @media (min-width: 768px) {
+    margin-left: 150px;
     width: 90px;
     height: 90px;
   }

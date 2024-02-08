@@ -55,9 +55,12 @@ const StyledLink = styled(Link)`
   }
   &:hover {
     color: ${colors.third};
-    font-size: 24px;
+    font-size: 16px;
     font-weight: bold;
     opacity: 1;
+    @media (min-width: 768px) {
+      font-size: 30px;
+    }
   }
 `
 
