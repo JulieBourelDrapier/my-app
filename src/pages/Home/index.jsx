@@ -7,7 +7,7 @@ const apparitionAnimation = keyframes`
   0% {
    opacity: 0;
   }
-  50% {
+  75% {
    opacity: 0.5;
   }
   100% {
@@ -72,48 +72,52 @@ const SecondSection = styled.section`
   font-family: ${fonts.third};
   width: 100%;
   border-radius: 18px;
-  background-image: url(${require('../../assets/nik.webp')});
+  background-image: url(${require('../../assets/nik.jpg')});
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
-  height: 400px;
+  min-height: 400px;
   justify-content: center;
   @media (min-width: 768px) {
-    height: 600px; 
+    min-height: 600px; 
   }
 `
-
 const DetailsContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 80%;
   animation: ${apparitionAnimation} 3s ease-in-out;
+}
 `
-const Details = styled.p`
+const Logo = styled.h1`
+  color: ${colors.black};
+  opacity: 0.8;
+  font-family: ${fonts.primary};
+  font-size: 28px;
+  padding-left: 10px;
+  letter-spacing: 6px;
+  text-align: left;
+  @media (min-width: 768px) {
+    font-size: 40px;
+  }
+`
+const LiContainer = styled.ul`
+  padding: 0;
+`
+
+const Details = styled.li`
   color: ${colors.black};
   opacity: 0.8;
   letter-spacing: 1px;
   font-size: 14px;
   font-family: ${fonts.third};
   display: flex;
-  padding-top: 0;
-  padding-left: 10px;
+  opacity: 0.8;
   justify-content: flex-start;
   @media (min-width: 768px) {
-    font-size: 40px;
-    justify-content: center;
-  }
-`
-const Logo = styled.h1`
-  color: ${colors.primary};
-  font-family: ${fonts.primary};
-  font-size: 28px;
-  padding-left: 10px;
-  letter-spacing: 6px;
-  text-align: center;
-  @media (min-width: 768px) {
-    font-size: 40px;
+    font-size: 26px;
   }
 `
 
@@ -131,9 +135,14 @@ function Home() {
 
       <SecondSection>
         <DetailsContainer>
-          <Logo>IDev</Logo> 
-          <Details>Entreprise naît de la volonté de créer des sites vitrines pour des créateurs en quête de visibilité</Details>
-        </DetailsContainer>
+          <Logo>L'agence IDev</Logo>
+          <LiContainer>
+            <Details>Une agence web :</Details>
+            <Details>A taille humaine.</Details>
+            <Details>Visant la création de sites vitrines pour des créateurs en quête de visibilité.</Details>
+            <Details>Spécialisée dans la refonte & la création de sites web.</Details>
+          </LiContainer>
+        </DetailsContainer> 
       </SecondSection>
 
     </HomeWrapper>

@@ -1,0 +1,32 @@
+[
+	{
+		"id": "1111",
+		"title": "NinaCarducci",
+		"cover": "../../assets/NinaCarducciWebsite.png",
+		"pictures": [
+      "../../assets/NinaCarducciWebsite.png"
+		],
+		"description": "Nina Carducci, photographe professionnelle en quête de visibilité.",
+		"rating": "5"
+	},
+  {
+		"id": "1111",
+		"title": "NinaCarducci",
+		"cover": "../../assets/NinaCarducciWebsite.png",
+		"pictures": [
+      "../../assets/NinaCarducciWebsite.png"
+		],
+		"description": "Nina Carducci, photographe professionnelle en quête de visibilité.",
+		"rating": "5"
+	},
+  {
+		"id": "1111",
+		"title": "NinaCarducci",
+		"cover": "../../assets/NinaCarducciWebsite.png",
+		"pictures": [
+      "../../assets/NinaCarducciWebsite.png"
+		],
+		"description": "Nina Carducci, photographe professionnelle en quête de visibilité.",
+		"rating": "5"
+	}
+]

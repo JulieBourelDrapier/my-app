@@ -10,7 +10,7 @@ const ContactContainer = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-image: url(${require('../../assets/conception.webp')});
+  background-image: url(${require('../../assets/conception.jpg')});
   background-size: cover;
   background-position: center;
   height: 270px;
