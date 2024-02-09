@@ -51,7 +51,7 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   padding: 10px;
   @media (min-width: 768px) {
-    font-size: 30px; 
+    font-size: 26px; 
   }
   &:hover {
     color: ${colors.third};

@@ -1,152 +1,82 @@
-import { useParams } from 'react-router-dom';
-import accommodationInfo from '../data/projects.json';
-import Gallery from '../components/gallery'
-import Styled from 'styled-components';
-import Error from './error';
+import styled from 'styled-components'
+import colors from '../../utils/style/colors'
+import fonts from '../../utils/style/fonts'
 
-const Section = Styled.section`
-display: flex;  
-flex-direction: column;
-margin: 20px;
-@media (min-width: 768px) {
-  margin: 70px;
-}
+
+const ProjectsSection = styled.article`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: ${fonts.third};
+  background-color: ${colors.white};
+  border-radius: 18px;
+  padding: 70px;
 `
-
-const AccommodationHeader = Styled.header`
-display: flex;
-flex-direction: column;
-margin-top: 10px;
-
-@media (min-width: 768px) {
-  flex-direction: row;
-  justify-content: space-between;
-}
-`
-
-const AccommodationTitle = Styled.h2`
-color: #FF6060; 
-font-size: 18px;
-margin: 0;
-
-@media (min-width: 768px) {
-  font-size: 24px;
-}
-
-@media (min-width: 1200px) {
-  font-size: 36px;
-}
-`
-
-const AccommodationAdress = Styled.h3`
-color: #FF6060; 
-font-size: 14px;
-margin: 0;
-
-@media (min-width: 768px) {
-font-size: 16px;
-}
-
-@media (min-width: 1200px) {
-font-size: 18px;
-}
-`
-
-
-
-
-function Accommodation() {
-const { accommodationId } = useParams();
-const accommodation = accommodationInfo.find((a) => a.id === accommodationId);
-
-if (!accommodation) return <Error />
-
-return (
-  <div>
-  { !!accommodation && accommodation.id !== null &&
-    <Section>
-            <Gallery imgSrc={accommodation.pictures} title={accommodation.title}/>
-      <AccommodationHeader>
-        
-        <section>
-              <AccommodationTitle>{accommodation.title}</AccommodationTitle>
-              <AccommodationAdress>{accommodation.location}</AccommodationAdress>
-        </section>
-
-        <section>
-        </section>        
-      </AccommodationHeader>
-        </Section>
+const MainTitle = styled.h1`
+  padding: 0;
+  color: ${colors.black};
+  opacity: 0.7;
+  padding: 0;
+  margin-top: 10px;
+  font-family: ${fonts.third};	
+  width: 70%;
+  text-align: center;
+  font-size: 18px;
+  @media (min-width: 768px) {
+    width: 90%;
+    font-size: 40px;
+    margin-top: 30px;
   }
-  </div>)
+`
+const Title = styled.h2`
+  padding: 0;
+  color: ${colors.sixth};
+  opacity: 0.7;
+  font-family: ${fonts.fourth};	
+  width: 70%;
+  text-align: center;
+  font-size: 14px;
+  @media (min-width: 768px) {
+    width: 90%;
+    font-size: 28px;
+  }
+`
+const ProjectsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 80%;
+  padding-bottom: 120px;
+`
+const Project = styled.img`
+  width: 300px;
+  height: auto;
+  margin: 10px;
+  border: 3px solid ${colors.sixth};
+  border-radius: 10px;
+`;
+
+function Projets() {
+  return (
+    <ProjectsSection>
+      <MainTitle>Projets professionnalisants</MainTitle>
+      <Title>Stack : React / Redux / JavaScript  </Title>
+      <ProjectsContainer>
+        <Project src={require('../../assets/mockup-JB.png')}/>
+        <Project src={require('../../assets/mockup-NC.png')}/>
+        <Project src={require('../../assets/mockup-Ohmyfood.png')}/>
+        <Project src={require('../../assets/mockup-SB.png')} />
+        <Project src={require('../../assets/mockup-Kasa.png')} />
+        <Project src={require('../../assets/mockup-Idev.png')} />
+        <Project src={require('../../assets/mockup-Ridingcities.png')} />
+        <Project src={require('../../assets/mockup-Argentbank.png')} />
+      </ProjectsContainer>
+
+    </ProjectsSection>
+  )
 }
 
-export default Accommodation
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import styled from 'styled-components'
-// import colors from '../../utils/style/colors'
-// import fonts from '../../utils/style/fonts'
-// import Nina from '../../assets/NinaCarducciWebsite.png'
-// import React from 'react'
-
-// const ProjectsSection = styled.article`
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   font-family: ${fonts.third};
-// `
-// const Title = styled.h2`
-//   color: ${colors.primary};
-// `
-// const ProjectsContainer = styled.section`
-//   display: flex;
-//   flex-direction: column;
-// `
-// const Project = styled.div`
-//   width: 600px;
-//   height: 600px;
-//   margin: 10px;
-// `;
-
-// function Projets() {
-//   return (
-//     <ProjectsSection>
-//       <Title>Les projets sur lesquels j'ai eu l'occasion de travailler</Title>
-//       <ProjectsContainer>
-//         <Project image={Nina} alt="mockup du site"/>
-//         <Project image={Nina} alt="mockup du site" />
-//         <Project image={Nina} alt="mockup du site" />
-//         <Project image={Nina} alt="mockup du site" />
-//         <Project image={Nina} alt="mockup du site" />
-//       </ProjectsContainer>
-
-//     </ProjectsSection>
-//   )
-// }
-
-// export default Projets
+export default Projets

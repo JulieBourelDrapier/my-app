@@ -13,9 +13,9 @@ const ContactContainer = styled.section`
   background-image: url(${require('../../assets/conception.jpg')});
   background-size: cover;
   background-position: center;
-  height: 270px;
+  height: 300px;
   @media (min-width: 768px) {
-    height: 400px; 
+    height: 600px; 
   }
 `
 const ContactSection = styled.div`
